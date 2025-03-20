@@ -1,0 +1,257 @@
+/* YCM 學術知識蒐集系統樣式 */
+
+:root {
+    --primary-color: #3a6ea5;
+    --secondary-color: #004e98;
+    --accent-color: #ff6b6b;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+}
+
+body {
+    font-family: 'Microsoft JhengHei', 'PingFang TC', 'Heiti TC', 'Apple LiGothic', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* 側邊欄樣式 */
+.sidebar {
+    background-color: var(--dark-color);
+    color: white;
+    min-height: 100vh;
+    padding: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    padding: 20px 15px;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.sidebar-content {
+    padding: 15px;
+}
+
+.sidebar-footer {
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 主要內容區樣式 */
+.main-content {
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* 搜尋區域樣式 */
+.search-section {
+    margin-bottom: 30px;
+}
+
+.search-section .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-options {
+    margin-top: 10px;
+}
+
+/* 研究結果區域樣式 */
+.research-results .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.research-status {
+    text-align: center;
+    padding: 20px;
+}
+
+.research-content {
+    padding: 10px;
+}
+
+.research-summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.research-sources {
+    margin-bottom: 20px;
+}
+
+/* 聊天區域樣式 */
+.chat-section .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #e3f2fd;
+    margin-left: 20%;
+    margin-right: 5px;
+}
+
+.assistant-message {
+    background-color: #f1f1f1;
+    margin-right: 20%;
+    margin-left: 5px;
+}
+
+/* 快取消息樣式 */
+.cache-message {
+    background-color: #fff3cd;
+    border-left: 3px solid #ffc107;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.cache-message::before {
+    content: "快取";
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background-color: #ffc107;
+    color: #212529;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* WebSocket 連接狀態樣式 */
+.websocket-status {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.online {
+    background-color: var(--success-color);
+}
+
+.offline {
+    background-color: var(--danger-color);
+}
+
+.connecting {
+    background-color: var(--warning-color);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+    }
+    
+    .sidebar-footer {
+        position: relative;
+    }
+}
+
+/* 按鈕樣式 */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* 搜尋歷史列表樣式 */
+#history-list li {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+#history-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Markdown 內容樣式 */
+.markdown-content {
+    line-height: 1.6;
+}
+
+.markdown-content h1, 
+.markdown-content h2, 
+.markdown-content h3, 
+.markdown-content h4, 
+.markdown-content h5, 
+.markdown-content h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-content code {
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.markdown-content pre {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
